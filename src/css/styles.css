@@ -935,3 +935,96 @@ img {
     font-size: 0.9rem;
     align-self: flex-start;
 }
+/* --- LEGAL PAGES (Юридические страницы) --- */
+.pages {
+    padding-top: calc(var(--header-height) + 60px);
+    /* Отступ от хедера */
+    padding-bottom: 80px;
+    background-color: var(--color-bg);
+}
+
+.pages__content {
+    background: var(--color-white);
+    padding: 40px;
+    /* Отступы внутри листа */
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    max-width: 900px;
+    /* Ограничиваем ширину для удобства чтения */
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.pages h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.pages h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--color-text);
+}
+
+.pages p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin-bottom: 16px;
+}
+
+.pages ul,
+.pages ol {
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+.pages li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+
+/* Маркеры для списков */
+.pages ul li::marker {
+    color: var(--color-primary);
+}
+
+.pages strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.pages a {
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.pages a:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .pages__content {
+        padding: 24px;
+    }
+
+    .pages h1 {
+        font-size: 2rem;
+    }
+}
